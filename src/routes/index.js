@@ -1,6 +1,7 @@
 import Page from '../layouts/Page.vue';
 
 import About from '../views/About.vue';
+import Blog from '../views/Blog.vue';
 import Contact from '../views/Contact.vue';
 import Home from '../views/Home.vue';
 import Services from '../views/Services.vue';
@@ -29,6 +30,11 @@ export default [
             {
                 component: Services,
                 path: '/services',
+            },
+
+            {
+                component: Blog,
+                path: '/blog',
             }
         ],
     }

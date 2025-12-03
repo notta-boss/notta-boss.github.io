@@ -4,7 +4,7 @@
         <p>Auckland-based software studio with <Highlight>+20 years of experience</Highlight> delivering cloud-ready products and dragging legacy code out of the swamp, if you will.</p>
     </div>
 
-    <Anchor href="mailto:contact@nottaboss.co.nz?subject=Knock%20Knock">Pull Me Out Of This Swamp You Mentioned!</Anchor>
+    <Anchor class="self-stretch sm:self-auto" href="mailto:contact@nottaboss.co.nz?subject=Knock%20Knock">Pull Me Out Of This Swamp You Mentioned!</Anchor>
 </template>
 
 <script setup>
