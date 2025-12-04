@@ -1,5 +1,6 @@
 @import url('https://api.fontshare.com/v2/css?f[]=tanker@400&f[]=gambetta@1,2&display=swap');
 @import 'tailwindcss';
+@plugin '@tailwindcss/typography';
 
 @theme {
     --font-display: 'Tanker', 'sans-serif';

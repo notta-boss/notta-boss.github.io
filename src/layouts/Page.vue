@@ -6,7 +6,7 @@
                     <Menu />
 
                     <span class="font-normal text-zinc-500 uppercase">This is</span>
-                    <h1 class="font-black text-4xl">Notta Boss</h1>
+                    <h1 class="font-black text-4xl">Notta {{ isBlog ? 'Blog' : 'Boss' }}</h1>
                 </div>
 
                 <div class="flex flex-col gap-12 items-center justify-center">
@@ -19,4 +19,11 @@
 
 <script setup>
     import Menu from '../components/Menu.vue';
+    import { useRoute } from 'vue-router';
+    import { computed } from 'vue';
+
+    const pattern = /^\/blog(\/.+)?/;
+    const route = useRoute();
+
+    const isBlog = computed(() => pattern.test(route.path));
 </script>
