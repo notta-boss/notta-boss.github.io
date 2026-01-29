@@ -1,6 +1,6 @@
 <template>
     <p>There was a time when seeing a web page update without a reload felt like magic. Today, for modern SaaS applications, it's just expected.</p>
-    <p>While not every website needs to be alive (blogs don't need to pulse) application users have been trained by tools like Slack, Linear, and Figma to expect immediacy. In those contexts, if a user has to hit "refresh" to see a status change or a new comment... it just feels wrong.</p>
+    <p>While not every website needs to be alive (blogs don't need to pulse), application users have been trained by tools like Slack, Linear, and Figma to expect immediacy. In those contexts, if a user has to hit "refresh" to see a status change or a new comment... it just feels wrong.</p>
 
     <p>But for years, developers have been stuck between two extremes when building these features:</p>
     <ol class="text-left">
@@ -46,13 +46,13 @@
     <h3>Why We Built It (The Studio Philosophy)</h3>
 
     <p>Notta Boss is a software studio. We build products. And like any artisan, we need sharp tools.</p>
-    <p>We built Notta Socket because <strong>we</strong> needed it for our upcoming projects. We needed a way to add "live" magic to our apps without spinning up new infrastructure every time and without having an uncomfortable conversation with the finance department about the monthly bill.</p>
+    <p>We built Notta Socket because <strong>we</strong> needed it for our upcoming projects. We needed a way to add "live" magic to our apps without spinning up new infrastructure every time and without having an uncomfortable conversation with the Finance department about the monthly bill.</p>
     <p>We are our own first customer. That means we rely on it just as much as you do.</p>
 
     <h3>The Road Ahead</h3>
 
     <p>Notta Socket is officially live. The lights are on, the API is stable, and the connections are flowing.</p>
-    <p>Whether you are building a SaaS, a dashboard, or a collaborative tool, if you are tired of maintaining your own socket infrastructure, come take a look. We've made the migration path incredibly simple and you can swap us in for your existing provider in literally seconds.</p>
+    <p>Whether you are building a SaaS, a dashboard, or a collaborative tool, if you are tired of maintaining your own socket infrastructure, come take a look. We've made the migration path incredibly simple. You can swap us in for your existing provider in literally seconds.</p>
     <p>We're just getting started. We've been building in the dark for a while, but now we're ready to make some noise.</p>
 
     <Link href="https://nottasocket.com">Get Real-Time with Notta Socket</Link>
