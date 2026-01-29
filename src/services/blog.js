@@ -1,17 +1,18 @@
-import AiToldMeYouAreWrong from '../views/blog/AiToldMeYouAreWrong.vue';
+import IntroducingNottaSocketTheRealTimeEngineWeAlwaysWanted from '../views/blog/IntroducingNottaSocketTheRealTimeEngineWeAlwaysWanted.vue';
 
 export const articles = [
     {
-        component: AiToldMeYouAreWrong,
+        component: IntroducingNottaSocketTheRealTimeEngineWeAlwaysWanted,
 
-        title: `AI Told Me: You're Wrong! Learn How To Think Again`,
-        path: '/blog/ai-told-me-you-are-wrong',
-        excerpt: `Just like calculators didn't replace math, AI won't replace people who actually understand their craft. The real risk isn't that machines will take our jobs, but that too many people try to outsource thinking before they've learned the basics. AI isn't the problem, our attitude toward it is.`,
-        date: 'December 4, 2025',
+        title: 'Introducing Notta Socket: The Real-Time Engine We Always Wanted',
+        path: '/blog/introducing-notta-socket-the-real-time-engine-we-always-wanted',
+        excerpt: `We got tired of choosing between expensive enterprise tools and complex DIY servers for real-time features. So we built Notta Socket: a high-performance, serverless WebSocket engine designed for makers who value craftsmanship. Here is why (and how) we built the infrastructure to handle scale without the bloat.`,
+        date: 'January 29, 2026',
 
         tags: [
-            'Artificial Intelligence',
-            'Opinion',
+            'Cloud Infrastructure',
+            'Saas',
+            'Web Sockets',
         ],
     }
 ];
