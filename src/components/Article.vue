@@ -58,5 +58,5 @@
         }
     });
 
-    const image = computed(() => props.path + '/og-image.webp');
+    const image = computed(() => props.path + '/og-image.png');
 </script>
