@@ -1,16 +1,18 @@
 <template>
     <article class="flex flex-col gap-12 max-w-3xl">
-        <header class="flex flex-col gap-4">
-            <time class="font-display text-graphite">{{ date }}</time>
-            <h1 class="font-display font-extrabold leading-none text-5xl tracking-tight md:text-6xl">{{ title }}</h1>
-            <ul class="flex flex-wrap font-display gap-x-4 text-graphite" v-if="tags.length">
-                <li v-for="tag in tags" :key="tag">{{ tag }}</li>
+        <header class="flex flex-col gap-6">
+            <Label class="text-mute">{{ date }}</Label>
+            <h1 class="font-extrabold leading-none text-5xl tracking-tight md:text-6xl">{{ title }}</h1>
+            <ul class="flex flex-wrap gap-4" v-if="tags.length">
+                <li v-for="tag in tags" :key="tag">
+                    <Highlight>{{ tag }}</Highlight>
+                </li>
             </ul>
         </header>
 
-        <img :alt="title" class="rounded-xl w-full" :src="image" />
+        <img :alt="title" class="w-full" :src="image" />
 
-        <div class="prose prose-xl prose-headings:font-display prose-headings:font-extrabold prose-headings:tracking-tight prose-a:decoration-1 prose-a:decoration-stone-400 hover:prose-a:decoration-2 hover:prose-a:decoration-amber-300 prose-stone dark:prose-invert">
+        <div class="font-light prose prose-neutral prose-headings:font-extrabold prose-headings:tracking-tight prose-a:decoration-mark prose-a:decoration-2 prose-a:font-semibold prose-strong:font-semibold dark:prose-invert">
             <component :is="component" />
         </div>
     </article>
@@ -18,6 +20,9 @@
 
 <script setup>
     import { computed } from 'vue';
+
+    import Highlight from './Highlight.vue';
+    import Label from './Label.vue';
 
     const props = defineProps({
         component: {

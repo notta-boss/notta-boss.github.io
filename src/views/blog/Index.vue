@@ -1,6 +1,8 @@
 <template>
-    <Section title="Blog">
-        <Teaser v-for="article in articles" v-bind="article" :key="article.path" />
+    <Section label="Blog" title="Notes from the swamp">
+        <div class="flex flex-col gap-16 mt-4">
+            <Teaser v-for="article in articles" v-bind="article" :key="article.path" />
+        </div>
     </Section>
 </template>
 

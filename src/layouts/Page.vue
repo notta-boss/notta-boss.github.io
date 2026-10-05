@@ -1,29 +1,29 @@
 <template>
     <div class="grid min-h-dvh p-4">
-        <div class="bg-sheet flex flex-col px-6 md:px-12 lg:px-20 dark:bg-sheet-dark">
-            <header class="flex flex-wrap gap-6 items-center justify-between py-8">
-                <RouterLink aria-label="Notta Boss, home" class="flex font-display font-extrabold gap-3 items-center text-2xl" to="/">
-                    <Logomark class="h-10 w-auto" />
-                    <span>Notta Boss</span>
+        <div class="bg-card flex flex-col px-6 py-8 shadow-[0_30px_80px_-40px_rgba(0,0,0,0.25)] md:px-12 md:py-10 lg:px-16">
+            <header class="flex items-center justify-between">
+                <RouterLink aria-label="Notta Boss, home" class="flex gap-3 items-center" to="/">
+                    <Logomark class="h-9 w-auto" />
+                    <Label>Notta Boss</Label>
                 </RouterLink>
 
                 <Nav />
             </header>
 
-            <main class="flex flex-col flex-1 gap-32 py-16 md:py-24">
+            <main class="flex flex-col flex-1 py-12 md:py-16">
                 <RouterView />
             </main>
 
-            <footer class="flex flex-col font-display gap-2 justify-between py-12 text-graphite md:flex-row">
-                <span>Notta Boss, Auckland, Aotearoa New Zealand.</span>
-                <span>Figures drawn with <Link href="https://hairline.lucasmarkes.com">Hairline</Link>.</span>
+            <footer class="flex items-center justify-between">
+                <Label class="hover:bg-mark" is="a" href="mailto:contact@nottaboss.co.nz">contact@nottaboss.co.nz</Label>
+                <Label class="text-mute">Auckland, Aotearoa</Label>
             </footer>
         </div>
     </div>
 </template>
 
 <script setup>
-    import Link from '../components/Link.vue';
+    import Label from '../components/Label.vue';
     import Logomark from '../components/Logomark.vue';
     import Nav from '../components/Nav.vue';
 </script>

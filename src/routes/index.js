@@ -1,4 +1,5 @@
-import { articles, work } from '../services';
+import { articles } from '../services/articles';
+import { work } from '../services/work';
 
 import Page from '../layouts/Page.vue';
 

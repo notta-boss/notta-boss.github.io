@@ -1,8 +1,5 @@
 <template>
-    <div class="flex flex-col gap-2">
-        <div ref="stage" />
-        <p aria-live="polite" class="font-display self-end text-graphite text-sm" ref="read">rest</p>
-    </div>
+    <div ref="stage" />
 </template>
 
 <script setup>
@@ -12,7 +9,6 @@
     import source from '../../figures/dredge.js?raw';
 
     const stage = useTemplateRef('stage');
-    const read = useTemplateRef('read');
 
     const HL = new Function(kernel + '; return HL;')();
 
@@ -37,7 +33,7 @@
 
         const svg = HL.mk('svg', { 'aria-hidden': 'true', viewBox: '0 0 400 320' }, stage.value);
 
-        handle = figure.mount({ read: read.value, stage: stage.value, svg }, figure.range[1]);
+        handle = figure.mount({ read: { textContent: 'rest' }, stage: stage.value, svg }, figure.range[1]);
     });
 
     onBeforeUnmount(() => handle?.destroy());

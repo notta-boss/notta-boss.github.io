@@ -1,17 +1,19 @@
 <template>
-    <article class="flex flex-col gap-4 max-w-prose">
-        <h3 class="font-display font-extrabold leading-tight text-3xl tracking-tight">
-            <RouterLink class="decoration-2 decoration-amber-300 underline-offset-4 hover:underline" :to="path">{{ title }}</RouterLink>
+    <article class="flex flex-col gap-6 max-w-xl">
+        <Label class="text-mute">{{ date }}</Label>
+        <h3 class="font-extrabold leading-none text-3xl tracking-tight md:text-4xl">
+            <RouterLink :to="path">{{ title }}</RouterLink>
         </h3>
-        <time class="font-display text-graphite">{{ date }}</time>
         <Prose>
             <p>{{ excerpt }}</p>
         </Prose>
-        <RouterLink class="decoration-1 decoration-stone-400 underline underline-offset-4 transition-colors hover:decoration-2 hover:decoration-amber-300 dark:decoration-stone-600 font-display font-medium self-start" :to="path">Read the article</RouterLink>
+        <Anchor class="self-start" is="router-link" :to="path">Read the article</Anchor>
     </article>
 </template>
 
 <script setup>
+    import Anchor from './Anchor.vue';
+    import Label from './Label.vue';
     import Prose from './Prose.vue';
 
     defineProps({

@@ -1,19 +1,19 @@
 <template>
     <article class="flex flex-col gap-16">
         <header class="flex flex-col gap-6 max-w-3xl">
-            <p class="font-display text-graphite">{{ client }}, {{ year }}</p>
-            <h1 class="font-display font-extrabold leading-none text-5xl tracking-tight md:text-6xl">{{ title }}</h1>
+            <Label class="text-mute">{{ client }}, {{ year }}</Label>
+            <h1 class="font-extrabold leading-none text-5xl tracking-tight md:text-6xl">{{ title }}</h1>
             <Prose>
                 <p>{{ summary }}</p>
             </Prose>
-            <Link class="font-display self-start" :href="url">Visit the site</Link>
+            <Link class="self-start" :href="url">Visit the site</Link>
         </header>
 
-        <img v-for="image in images" :alt="image.alt" class="bg-plate p-4 rounded-xl w-full dark:bg-stone-900 md:p-8" :key="image.src" :src="image.src" />
+        <img v-for="image in images" :alt="image.alt" class="bg-wash p-6 w-full md:p-10" :key="image.src" :src="image.src" />
 
         <div class="gap-12 grid lg:grid-cols-3">
             <div v-for="part in parts" class="flex flex-col gap-4" :key="part.title">
-                <h2 class="font-display font-extrabold text-2xl tracking-tight">{{ part.title }}</h2>
+                <h2 class="font-extrabold text-2xl tracking-tight">{{ part.title }}</h2>
                 <Prose>
                     <p>{{ part.body }}</p>
                 </Prose>
@@ -21,9 +21,11 @@
         </div>
 
         <div class="flex flex-col gap-4">
-            <h2 class="font-display font-extrabold text-2xl tracking-tight">Built with</h2>
-            <ul class="flex flex-wrap font-display gap-x-6 gap-y-2 text-graphite">
-                <li v-for="tool in stack" :key="tool">{{ tool }}</li>
+            <h2 class="font-extrabold text-2xl tracking-tight">Built with</h2>
+            <ul class="flex flex-wrap gap-3">
+                <li v-for="tool in stack" :key="tool">
+                    <Highlight>{{ tool }}</Highlight>
+                </li>
             </ul>
         </div>
 
@@ -35,6 +37,8 @@
     import { computed } from 'vue';
 
     import Anchor from '../../components/Anchor.vue';
+    import Highlight from '../../components/Highlight.vue';
+    import Label from '../../components/Label.vue';
     import Link from '../../components/Link.vue';
     import Prose from '../../components/Prose.vue';
 

@@ -1,23 +1,26 @@
 <template>
-    <article class="grid gap-8 items-start lg:grid-cols-5">
-        <RouterLink class="bg-plate block lg:col-span-3 overflow-hidden p-4 rounded-xl dark:bg-stone-900 md:p-8" :to="path">
-            <img :alt="images[0].alt" class="aspect-[16/10] object-cover object-top rounded-lg w-full" :src="images[0].src" />
+    <article class="gap-10 grid items-center lg:grid-cols-2 lg:gap-16">
+        <RouterLink class="bg-wash block p-6 relative md:p-10" :to="path">
+            <span aria-hidden="true" class="absolute bg-mark h-[118%] left-1/2 rounded-full rotate-[24deg] top-1/2 -translate-x-1/2 -translate-y-1/2 translate-x-28 w-2.5" />
+            <img :alt="images[0].alt" class="aspect-[16/10] object-cover object-top relative shadow-[0_30px_60px_-30px_rgba(0,0,0,0.35)] w-full" :src="images[0].src" />
         </RouterLink>
 
-        <div class="flex flex-col gap-4 lg:col-span-2">
-            <h3 class="font-display font-extrabold leading-tight text-3xl tracking-tight">
-                <RouterLink class="decoration-2 decoration-amber-300 underline-offset-4 hover:underline" :to="path">{{ title }}</RouterLink>
+        <div class="flex flex-col gap-6">
+            <Label class="text-mute">{{ client }}, {{ year }}</Label>
+            <h3 class="font-extrabold leading-none text-4xl tracking-tight md:text-5xl">
+                <RouterLink :to="path">{{ title }}</RouterLink>
             </h3>
-            <p class="font-display text-graphite">{{ client }}, {{ year }}</p>
             <Prose>
                 <p>{{ summary }}</p>
             </Prose>
-            <RouterLink class="decoration-1 decoration-stone-400 underline underline-offset-4 transition-colors hover:decoration-2 hover:decoration-amber-300 dark:decoration-stone-600 font-display font-medium self-start" :to="path">Read the case study</RouterLink>
+            <Anchor class="self-start" is="router-link" :to="path">Read the case study</Anchor>
         </div>
     </article>
 </template>
 
 <script setup>
+    import Anchor from './Anchor.vue';
+    import Label from './Label.vue';
     import Prose from './Prose.vue';
 
     defineProps({

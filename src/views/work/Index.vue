@@ -1,10 +1,12 @@
 <template>
-    <Section title="Work">
+    <Section label="Work" title="Things we put our name on">
         <Prose>
-            <p>Things we have built and are happy to put our name on. The list is short on purpose. It grows as projects ship.</p>
+            <p>The list is short on purpose. It grows as projects ship.</p>
         </Prose>
 
-        <Project v-for="project in work" v-bind="project" :key="project.path" />
+        <div class="flex flex-col gap-24 mt-8">
+            <Project v-for="project in work" v-bind="project" :key="project.path" />
+        </div>
     </Section>
 </template>
 

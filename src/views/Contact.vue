@@ -1,8 +1,7 @@
 <template>
-    <Section title="Get in touch">
+    <Section label="Contact" title="Get in touch">
         <Prose>
-            <p>If there is even a flicker that we could build something great together, send an email.</p>
-            <p class="italic">A real person replies, usually the same day.</p>
+            <p>If there is even a flicker that we could build something great together, send an email. <Highlight>A real person replies</Highlight>, usually the same day.</p>
             <p>You can also find us on <Link href="https://www.linkedin.com/company/notta-boss">LinkedIn</Link>.</p>
         </Prose>
 
@@ -12,6 +11,7 @@
 
 <script setup>
     import Anchor from '../components/Anchor.vue';
+    import Highlight from '../components/Highlight.vue';
     import Link from '../components/Link.vue';
     import Prose from '../components/Prose.vue';
     import Section from '../components/Section.vue';
