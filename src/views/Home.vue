@@ -11,7 +11,7 @@
             </div>
         </div>
 
-        <Figure class="w-full" intensity="0.6" label="A field of pillars rising where the pointer goes" name="terrain" />
+        <Dredge class="w-full" />
     </section>
 
     <Section title="Recent work">
@@ -31,7 +31,7 @@
     import { articles, work } from '../services';
 
     import Anchor from '../components/Anchor.vue';
-    import Figure from '../components/Figure.vue';
+    import Dredge from '../components/Dredge.vue';
     import Link from '../components/Link.vue';
     import Project from '../components/Project.vue';
     import Prose from '../components/Prose.vue';
