@@ -10,7 +10,7 @@
 
         <img :alt="title" class="rounded-xl w-full" :src="image" />
 
-        <div class="prose prose-xl prose-headings:font-display prose-headings:font-extrabold prose-headings:tracking-tight prose-a:text-kiwi prose-zinc dark:prose-invert">
+        <div class="prose prose-xl prose-headings:font-display prose-headings:font-extrabold prose-headings:tracking-tight prose-a:decoration-amber-300 prose-a:decoration-2 hover:prose-a:decoration-wavy prose-zinc dark:prose-invert">
             <component :is="component" />
         </div>
     </article>

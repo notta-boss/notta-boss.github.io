@@ -6,13 +6,13 @@
 
         <div class="flex flex-col gap-4 lg:col-span-2">
             <h3 class="font-display font-extrabold leading-tight text-3xl tracking-tight">
-                <RouterLink class="hover:text-kiwi" :to="path">{{ title }}</RouterLink>
+                <RouterLink class="decoration-2 decoration-amber-300 underline-offset-4 hover:underline" :to="path">{{ title }}</RouterLink>
             </h3>
             <p class="font-display text-graphite">{{ client }}, {{ year }}</p>
             <Prose>
                 <p>{{ summary }}</p>
             </Prose>
-            <RouterLink class="font-display font-medium text-kiwi hover:underline underline-offset-4" :to="path">Read the case study</RouterLink>
+            <RouterLink class="decoration-2 decoration-amber-300 underline underline-offset-4 hover:decoration-wavy font-display font-medium self-start" :to="path">Read the case study</RouterLink>
         </div>
     </article>
 </template>

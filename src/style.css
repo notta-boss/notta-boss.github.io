@@ -3,13 +3,11 @@
 @plugin '@tailwindcss/typography';
 
 @theme {
-    --color-graphite: #6b7280;
-    --color-ink: #16213a;
-    --color-kiwi: #4c8c1f;
-    --color-plate: #ffffff;
-    --color-sheet: #edefe9;
-    --color-sheet-dark: #10141f;
-    --color-slate: #a3a8b4;
+    --color-graphite: var(--color-zinc-500);
+    --color-ink: var(--color-zinc-950);
+    --color-plate: var(--color-zinc-50);
+    --color-sheet: #ffffff;
+    --color-sheet-dark: var(--color-zinc-950);
 
     --font-body: 'Sentient', 'Georgia', 'serif';
     --font-display: 'Cabinet Grotesk', 'sans-serif';
@@ -21,31 +19,31 @@
     }
 
     :root {
-        --hairline-edge: #8b90a0;
-        --hairline-hi: var(--color-ink);
-        --hairline-lo: #d6d9d1;
-        --hairline-mid: #b4b8c2;
+        --hairline-edge: var(--color-zinc-400);
+        --hairline-hi: var(--color-zinc-950);
+        --hairline-lo: var(--color-zinc-200);
+        --hairline-mid: var(--color-zinc-300);
         --hairline-plate: var(--color-sheet);
         --hairline-stroke: 1;
     }
 
     @media (prefers-color-scheme: dark) {
         :root {
-            --hairline-edge: #6c7284;
-            --hairline-hi: #f2f3ee;
-            --hairline-lo: #232a3b;
-            --hairline-mid: #454c5e;
+            --hairline-edge: var(--color-zinc-500);
+            --hairline-hi: #ffffff;
+            --hairline-lo: var(--color-zinc-800);
+            --hairline-mid: var(--color-zinc-600);
             --hairline-plate: var(--color-sheet-dark);
         }
     }
 
     ::selection {
-        background: var(--color-kiwi);
-        color: white;
+        background: var(--color-amber-300);
+        color: var(--color-zinc-950);
     }
 
     :focus-visible {
-        outline: 2px solid var(--color-kiwi);
+        outline: 2px solid var(--color-amber-300);
         outline-offset: 4px;
     }
 }

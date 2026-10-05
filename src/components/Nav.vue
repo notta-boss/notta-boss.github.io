@@ -1,6 +1,6 @@
 <template>
     <nav aria-label="Main" class="flex flex-wrap font-display font-medium gap-x-6 gap-y-2 items-center text-lg">
-        <RouterLink v-for="item in items" active-class="text-kiwi" class="hover:text-kiwi transition-colors" :key="item.to" :to="item.to">{{ item.label }}</RouterLink>
+        <RouterLink v-for="item in items" active-class="underline" class="decoration-2 decoration-amber-300 underline-offset-8 hover:underline" :key="item.to" :to="item.to">{{ item.label }}</RouterLink>
     </nav>
 </template>
 
