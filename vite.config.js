@@ -1,4 +1,5 @@
 import { blog } from './src/services/blog.js';
+import { work } from './src/services/work.js';
 import fs from 'fs';
 import { JSDOM } from 'jsdom';
 import path from 'path';
@@ -23,16 +24,22 @@ export default defineConfig({
             const buffer = fs.readFileSync(path.join(dist, 'index.html'));
             const payload = new JSDOM(buffer.toString());
 
-            for (const article of blog) {
+            const pages = [
+                ...blog.map(article => ({ description: article.excerpt, image: `https://nottaboss.co.nz/${article.path.substring(1)}/og-image.png`, path: article.path, title: article.title })),
+                ...work.map(project => ({ description: project.summary, image: 'https://nottaboss.co.nz/og-image.png', path: project.path, title: project.title })),
+            ];
+
+            for (const page of pages) {
                 const description = payload.window.document.querySelector('meta[name="description"]');
                 const image = payload.window.document.querySelector('meta[property="og:image"]');
                 const title = payload.window.document.querySelector('meta[property="og:title"]');
 
-                description.setAttribute('content', article.excerpt);
-                image.setAttribute('content', `https://nottaboss.co.nz/${article.path.substring(1)}/og-image.png`);
-                title.setAttribute('content', article.title);
+                description.setAttribute('content', page.description);
+                image.setAttribute('content', page.image);
+                title.setAttribute('content', page.title);
 
-                fs.writeFileSync(path.join(dist, article.path, 'index.html'), payload.serialize());
+                fs.mkdirSync(path.join(dist, page.path), { recursive: true });
+                fs.writeFileSync(path.join(dist, page.path, 'index.html'), payload.serialize());
             }
         }
     }],
