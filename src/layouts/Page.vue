@@ -1,29 +1,27 @@
 <template>
-    <div class="grid justify-items-stretch place-items-stretch min-h-dvh p-4">
-        <div class="bg-linear-to-b from-white to-zinc-50 dark:bg-linear-to-b dark:from-zinc-950 dark:to-zinc-900 flex flex-col items-center p-6 lg:p-20">
-            <div class="flex flex-col gap-20 text-center">
-                <div class="font-display flex flex-col items-center text-zinc-950 dark:text-white">
-                    <Menu />
+    <div class="flex flex-col min-h-dvh px-6 md:px-12 lg:px-20">
+        <header class="flex flex-wrap gap-6 items-center justify-between py-8">
+            <RouterLink aria-label="Notta Boss, home" class="flex font-display font-extrabold gap-3 items-center text-2xl" to="/">
+                <Logomark class="h-10 w-auto" />
+                <span>Notta Boss</span>
+            </RouterLink>
 
-                    <span class="font-normal text-zinc-500 uppercase">This is</span>
-                    <h1 class="font-black text-4xl">Notta {{ isBlog ? 'Blog' : 'Boss' }}</h1>
-                </div>
+            <Nav />
+        </header>
 
-                <div class="flex flex-col gap-12 items-center justify-center">
-                    <RouterView />
-                </div>
-            </div>
-        </div>
+        <main class="flex flex-col flex-1 gap-32 py-16 md:py-24">
+            <RouterView />
+        </main>
+
+        <footer class="flex flex-col font-display gap-2 justify-between py-12 text-graphite md:flex-row">
+            <span>Notta Boss, Auckland, Aotearoa New Zealand.</span>
+            <span>Figures drawn with <Link href="https://hairline.lucasmarkes.com">Hairline</Link>.</span>
+        </footer>
     </div>
 </template>
 
 <script setup>
-    import Menu from '../components/Menu.vue';
-    import { useRoute } from 'vue-router';
-    import { computed } from 'vue';
-
-    const pattern = /^\/blog(\/.+)?/;
-    const route = useRoute();
-
-    const isBlog = computed(() => pattern.test(route.path));
+    import Link from '../components/Link.vue';
+    import Logomark from '../components/Logomark.vue';
+    import Nav from '../components/Nav.vue';
 </script>

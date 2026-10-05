@@ -15,5 +15,8 @@
         "vue": "^3.5.25",
         "vue-gtag": "^3.6.3",
         "vue-router": "^4.6.3"
+    },
+    "dependencies": {
+        "@lucasmarkes/hairline": "^0.2.0"
     }
 }

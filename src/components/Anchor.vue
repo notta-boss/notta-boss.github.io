@@ -1,5 +1,5 @@
 <template>
-    <component class="bg-amber-300 border border-transparent font-black font-display px-6 py-4 text-zinc-950 transition-colors hover:border-amber-300 hover:bg-transparent hover:dark:text-white" :is="is">
+    <component class="bg-ink border-2 border-ink font-display font-medium inline-flex items-center justify-center px-6 py-3 rounded-full text-lg text-sheet transition-colors hover:bg-transparent hover:text-ink dark:bg-sheet dark:border-sheet dark:text-ink dark:hover:bg-transparent dark:hover:text-sheet" :is="is">
         <slot />
     </component>
 </template>

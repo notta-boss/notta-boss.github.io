@@ -1,8 +1,51 @@
-@import url('https://api.fontshare.com/v2/css?f[]=tanker@400&f[]=gambetta@1,2&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,800&f[]=sentient@400,401&display=swap');
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 
 @theme {
-    --font-display: 'Tanker', 'sans-serif';
-    --font-body: 'Gambetta', 'serif';
+    --color-graphite: #6b7280;
+    --color-ink: #16213a;
+    --color-kiwi: #4c8c1f;
+    --color-plate: #ffffff;
+    --color-sheet: #edefe9;
+    --color-sheet-dark: #10141f;
+    --color-slate: #a3a8b4;
+
+    --font-body: 'Sentient', 'Georgia', 'serif';
+    --font-display: 'Cabinet Grotesk', 'sans-serif';
+}
+
+@layer base {
+    html {
+        color-scheme: light dark;
+    }
+
+    :root {
+        --hairline-edge: #8b90a0;
+        --hairline-hi: var(--color-ink);
+        --hairline-lo: #d6d9d1;
+        --hairline-mid: #b4b8c2;
+        --hairline-plate: var(--color-sheet);
+        --hairline-stroke: 1;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --hairline-edge: #6c7284;
+            --hairline-hi: #f2f3ee;
+            --hairline-lo: #232a3b;
+            --hairline-mid: #454c5e;
+            --hairline-plate: var(--color-sheet-dark);
+        }
+    }
+
+    ::selection {
+        background: var(--color-kiwi);
+        color: white;
+    }
+
+    :focus-visible {
+        outline: 2px solid var(--color-kiwi);
+        outline-offset: 4px;
+    }
 }

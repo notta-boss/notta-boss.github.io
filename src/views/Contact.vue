@@ -1,22 +1,17 @@
 <template>
-    <h2 class="font-display font-semibold text-6xl md:text-7xl lg:w-2xl text-zinc-950 dark:text-white">Quick, catch it!</h2>
-    <div class="flex flex-col font-light gap-8 leading-relaxed text-2xl lg:w-3xl">
-        <p>You've seen the work, you've survived the website, now here we are. If there's even a flicker that we could build something great together, don't hesitate to get in touch.</p>
-        <p>Find us on <Link href="https://www.linkedin.com/company/notta-boss">LinkedIn</Link>, or send an email by pressing the button below gently. Above all, don't hurt the bird. It's been through enough.</p>
-    </div>
+    <Section title="Get in touch">
+        <Prose>
+            <p>If there is even a flicker that we could build something great together, send an email. A real person replies, usually the same day.</p>
+            <p>You can also find us on <Link href="https://www.linkedin.com/company/notta-boss">LinkedIn</Link>.</p>
+        </Prose>
 
-    <div class="flex flex-col items-center self-stretch">
-        <IconKiwiLetter class="pointer-events-none -mb-3 rotate-6 h-auto w-32 z-10" />
-        <Anchor class="self-stretch sm:self-auto" href="mailto:contact@nottaboss.co.nz?subject=Wire%20Me%20In%21">Phew, still safe from Skynet. Wire me in!</Anchor>
-    </div>
-
-    <div class="flex flex-col font-light gap-8 leading-relaxed text-2xl lg:w-3xl">
-        <p>Oh, and one more thing: even though this website was built with a little help from AI, I promise a real person will reply to your email… for at least a few more years to come.</p>
-    </div>
+        <Anchor class="self-start" href="mailto:contact@nottaboss.co.nz?subject=Wire%20Me%20In%21">Email contact@nottaboss.co.nz</Anchor>
+    </Section>
 </template>
 
 <script setup>
     import Anchor from '../components/Anchor.vue';
-    import IconKiwiLetter from "../components/IconKiwiLetter.vue";
     import Link from '../components/Link.vue';
+    import Prose from '../components/Prose.vue';
+    import Section from '../components/Section.vue';
 </script>

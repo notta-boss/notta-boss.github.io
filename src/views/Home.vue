@@ -1,13 +1,41 @@
 <template>
-    <h2 class="font-display font-semibold text-6xl md:text-7xl lg:w-2xl text-zinc-950 dark:text-white">It's just software engineering with confidence</h2>
-    <div class="flex flex-col font-light gap-8 leading-relaxed text-2xl lg:w-3xl">
-        <p>Auckland-based software studio with <Highlight>+20 years of experience</Highlight> delivering cloud-ready products and dragging legacy code out of the swamp, if you will.</p>
-    </div>
+    <section class="grid gap-12 items-center lg:grid-cols-2">
+        <div class="flex flex-col gap-8">
+            <h1 class="font-display font-extrabold leading-none text-5xl tracking-tight md:text-7xl">Software built by someone who has to live with it.</h1>
+            <Prose>
+                <p>Notta Boss is an Auckland studio run by one senior engineer. Twenty years of shipping products and pulling legacy systems out of the swamp, now building websites and SaaS you can actually look at.</p>
+            </Prose>
+            <div class="flex flex-wrap gap-4 items-center">
+                <Anchor is="router-link" to="/work">See the work</Anchor>
+                <Link class="font-display" href="mailto:contact@nottaboss.co.nz?subject=Knock%20Knock">or email Eddie</Link>
+            </div>
+        </div>
 
-    <Anchor class="self-stretch sm:self-auto" href="mailto:contact@nottaboss.co.nz?subject=Knock%20Knock">Pull Me Out Of This Swamp You Mentioned!</Anchor>
+        <Figure class="w-full" intensity="0.6" label="A field of pillars rising where the pointer goes" name="terrain" />
+    </section>
+
+    <Section title="Recent work">
+        <Project v-for="project in work" v-bind="project" :key="project.path" />
+    </Section>
+
+    <Section title="What we do">
+        <Services />
+    </Section>
+
+    <Section title="Latest from the blog">
+        <Teaser v-for="article in articles.slice(0, 1)" v-bind="article" :key="article.path" />
+    </Section>
 </template>
 
 <script setup>
+    import { articles, work } from '../services';
+
     import Anchor from '../components/Anchor.vue';
-    import Highlight from '../components/Highlight.vue';
+    import Figure from '../components/Figure.vue';
+    import Link from '../components/Link.vue';
+    import Project from '../components/Project.vue';
+    import Prose from '../components/Prose.vue';
+    import Section from '../components/Section.vue';
+    import Services from '../components/Services.vue';
+    import Teaser from '../components/Teaser.vue';
 </script>

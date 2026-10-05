@@ -1,10 +1,12 @@
 <template>
-    <div class="flex flex-col gap-40 items-center justify-center">
-        <Article v-bind="article" :component="null" v-for="article in articles" :key="article.path" />
-    </div>
+    <Section title="Blog">
+        <Teaser v-for="article in articles" v-bind="article" :key="article.path" />
+    </Section>
 </template>
 
 <script setup>
     import { articles } from '../../services';
-    import Article from '../../components/Article.vue';
+
+    import Section from '../../components/Section.vue';
+    import Teaser from '../../components/Teaser.vue';
 </script>
