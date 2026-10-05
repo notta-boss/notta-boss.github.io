@@ -9,7 +9,7 @@
             <Link class="font-display self-start" :href="url">Visit the site</Link>
         </header>
 
-        <img v-for="image in images" :alt="image.alt" class="bg-plate rounded-xl w-full dark:bg-ink" :key="image.src" :src="image.src" />
+        <img v-for="image in images" :alt="image.alt" class="bg-plate p-4 rounded-xl w-full dark:bg-stone-900 md:p-8" :key="image.src" :src="image.src" />
 
         <div class="gap-12 grid lg:grid-cols-3">
             <div v-for="part in parts" class="flex flex-col gap-4" :key="part.title">

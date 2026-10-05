@@ -1,7 +1,7 @@
 <template>
     <article class="grid gap-8 items-start lg:grid-cols-5">
-        <RouterLink class="bg-plate block lg:col-span-3 overflow-hidden rounded-xl dark:bg-ink" :to="path">
-            <img :alt="images[0].alt" class="aspect-[16/10] object-cover object-top w-full" :src="images[0].src" />
+        <RouterLink class="bg-plate block lg:col-span-3 overflow-hidden p-4 rounded-xl dark:bg-stone-900 md:p-8" :to="path">
+            <img :alt="images[0].alt" class="aspect-[16/10] object-cover object-top rounded-lg w-full" :src="images[0].src" />
         </RouterLink>
 
         <div class="flex flex-col gap-4 lg:col-span-2">
@@ -12,7 +12,7 @@
             <Prose>
                 <p>{{ summary }}</p>
             </Prose>
-            <RouterLink class="decoration-2 decoration-amber-300 underline underline-offset-4 hover:decoration-wavy font-display font-medium self-start" :to="path">Read the case study</RouterLink>
+            <RouterLink class="decoration-1 decoration-stone-400 underline underline-offset-4 transition-colors hover:decoration-2 hover:decoration-amber-300 dark:decoration-stone-600 font-display font-medium self-start" :to="path">Read the case study</RouterLink>
         </div>
     </article>
 </template>

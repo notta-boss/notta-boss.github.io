@@ -7,7 +7,7 @@
         <Prose>
             <p>{{ excerpt }}</p>
         </Prose>
-        <RouterLink class="decoration-2 decoration-amber-300 underline underline-offset-4 hover:decoration-wavy font-display font-medium self-start" :to="path">Read the article</RouterLink>
+        <RouterLink class="decoration-1 decoration-stone-400 underline underline-offset-4 transition-colors hover:decoration-2 hover:decoration-amber-300 dark:decoration-stone-600 font-display font-medium self-start" :to="path">Read the article</RouterLink>
     </article>
 </template>
 

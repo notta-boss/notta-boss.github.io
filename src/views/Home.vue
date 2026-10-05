@@ -3,7 +3,8 @@
         <div class="flex flex-col gap-8">
             <h1 class="font-display font-extrabold leading-none text-5xl tracking-tight md:text-7xl">Software built by someone who has to live with it.</h1>
             <Prose>
-                <p>Notta Boss is an Auckland studio run by one senior engineer. Twenty years of shipping products and pulling legacy systems out of the swamp, now building websites and SaaS you can actually look at.</p>
+                <p>Notta Boss is an Auckland studio run by one senior engineer. Twenty years of shipping products and pulling legacy systems out of the swamp.</p>
+                <p class="italic">Now building websites and SaaS you can actually look at.</p>
             </Prose>
             <div class="flex flex-wrap gap-4 items-center">
                 <Anchor is="router-link" to="/work">See the work</Anchor>

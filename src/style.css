@@ -3,11 +3,11 @@
 @plugin '@tailwindcss/typography';
 
 @theme {
-    --color-graphite: var(--color-zinc-500);
-    --color-ink: var(--color-zinc-950);
-    --color-plate: var(--color-zinc-50);
-    --color-sheet: #ffffff;
-    --color-sheet-dark: var(--color-zinc-950);
+    --color-graphite: var(--color-stone-500);
+    --color-ink: var(--color-stone-950);
+    --color-plate: var(--color-amber-100);
+    --color-sheet: var(--color-stone-50);
+    --color-sheet-dark: var(--color-stone-950);
 
     --font-body: 'Sentient', 'Georgia', 'serif';
     --font-display: 'Cabinet Grotesk', 'sans-serif';
@@ -19,27 +19,27 @@
     }
 
     :root {
-        --hairline-edge: var(--color-zinc-400);
-        --hairline-hi: var(--color-zinc-950);
-        --hairline-lo: var(--color-zinc-200);
-        --hairline-mid: var(--color-zinc-300);
+        --hairline-edge: var(--color-stone-400);
+        --hairline-hi: var(--color-stone-950);
+        --hairline-lo: var(--color-stone-200);
+        --hairline-mid: var(--color-stone-300);
         --hairline-plate: var(--color-sheet);
         --hairline-stroke: 1;
     }
 
     @media (prefers-color-scheme: dark) {
         :root {
-            --hairline-edge: var(--color-zinc-500);
-            --hairline-hi: #ffffff;
-            --hairline-lo: var(--color-zinc-800);
-            --hairline-mid: var(--color-zinc-600);
+            --hairline-edge: var(--color-stone-500);
+            --hairline-hi: var(--color-amber-300);
+            --hairline-lo: var(--color-stone-800);
+            --hairline-mid: var(--color-stone-600);
             --hairline-plate: var(--color-sheet-dark);
         }
     }
 
     ::selection {
         background: var(--color-amber-300);
-        color: var(--color-zinc-950);
+        color: var(--color-stone-950);
     }
 
     :focus-visible {
